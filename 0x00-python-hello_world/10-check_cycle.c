@@ -1,18 +1,4 @@
 #include "lists.h"
-/**
- * struct listint_s - singly linked list node
- * @n: integer value stored in the node
- * @next: pointer to the next node in the linked list
- *
- * Description: Structure for a singly linked list node
- */
-typedef struct listint_s
-{
-    int n;
-    struct listint_s *next;
-}
-listint_t;
-
 
 /**
  * check_cycle - checks if a singly linked list has a cycle in it
@@ -35,7 +21,7 @@ int check_cycle(listint_t *list)
             return (1);
 
         prev = prev->next;
-        prev = nxt->next->next;
+        nxt = nxt->next->next;
     }
 
     return (0);
