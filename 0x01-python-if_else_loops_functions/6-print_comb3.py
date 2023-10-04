@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 for j in range(0, 10):
     for k in range(j + 1, 10):
