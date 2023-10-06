@@ -10,6 +10,7 @@ if __name__ == "__main__":
 
     else:
         print(":", end="\n\n")
-        for key in range(1,num+1):
+        for key in range(1, num+1):
             print("{}: {}".format(key, sys.argv[key]))
+            
 `
