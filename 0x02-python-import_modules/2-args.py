@@ -9,7 +9,7 @@ if __name__ == "__main__":
         print("{} arguments.".format(num))
     elif num == 1:
 
-        print("{}: argument:".format(num))
+        print("{} argument:".format(num))
         print("{}: {}".format(num, sys.argv[num]))
     else:
 
