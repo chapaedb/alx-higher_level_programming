@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import dis
 
 if __name__ == "__main__":
