@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Defines a square."""
 
-
 class Square:
     """
     This class represents a square.
@@ -10,7 +9,7 @@ class Square:
         size (int): The size of the square.
     """
 
-    def __init(self, size=0):
+    def __init__(self, size=0):
         self.size = size
 
     @property

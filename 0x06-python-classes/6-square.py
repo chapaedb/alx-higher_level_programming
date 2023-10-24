@@ -8,10 +8,10 @@ class Square:
 
     Attributes:
         size (int): The size of the square.
-        __position (tuple): The position of the square.
+        position (tuple): The position of the square.
     """
 
-    def __init(self, size=0, position=(0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
 
@@ -69,7 +69,8 @@ class Square:
                 not all(isinstance(v, int) and v >= 0 for v in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-        def area(self):
+
+    def area(self):
         """
         Calculate and return the area of the square.
 

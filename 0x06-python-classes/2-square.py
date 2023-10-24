@@ -1,16 +1,15 @@
 #!/usr/bin/python3
 """Defines a square."""
 
-
 class Square:
     """
-    This class represent a square.
+    This class represents a square.
 
     Attributes:
         size (int): The size of the square.
     """
 
-    def __init(self, size=0):
+    def __init__(self, size=0):
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
