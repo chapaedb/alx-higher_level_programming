@@ -35,7 +35,7 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """
-        Inserts a new Node into the correct sorted position in the list (increasing order).
+        Inserts a new Node into the correct sorted position in the list.
 
         Args:
             value: The value to insert into the list.
@@ -64,4 +64,4 @@ class SinglyLinkedList:
         while current is not None:
             result += str(current.data) + "\n"
             current = current.next_node
-        return result.strip()
+        return result.rstrip() + "\n"
