@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+
+"""
+Square Module
+"""
+
 class Square:
     """
     Represents a square.
@@ -22,7 +28,7 @@ class Square:
         Returns:
             int: The size of the square.
         """
-        return self._size
+        return self.__size
 
     @size.setter
     def size(self, value):
@@ -41,7 +47,7 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self._size = value
+            self.__size = value
 
     @property
     def position(self):
@@ -51,7 +57,7 @@ class Square:
         Returns:
             tuple: The position of the square.
         """
-        return self._position
+        return self.__position
 
     @position.setter
     def position(self, value):
@@ -68,7 +74,7 @@ class Square:
            not all(isinstance(val, int) and val >= 0 for val in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
-            self._position = value
+            self.__position = value
 
     def area(self):
         """
@@ -90,3 +96,22 @@ class Square:
                 print()
             for _ in range(self.size):
                 print(" " * self.position[0] + "#" * self.size)
+
+    def __str__(self):
+        """
+        Returns a string representation of the square.
+
+        Returns:
+            str: The string representation of the square.
+        """
+        square_str = ""
+        if self.size == 0:
+            return square_str
+
+        for _ in range(self.position[1]):
+            square_str += "\n"
+
+        for _ in range(self.size):
+            square_str += " " * self.position[0] + "#" * self.size + "\n"
+
+        return square_str
