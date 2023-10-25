@@ -64,4 +64,4 @@ class SinglyLinkedList:
         while current is not None:
             result += str(current.data) + "\n"
             current = current.next_node
-        return result.rstrip() + "\n"
+        return result.strip()
