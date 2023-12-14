@@ -1,3 +1,3 @@
---show the tables in db
+-- show the tables in db
 SHOW TABLES;
 
