@@ -1,4 +1,5 @@
 --- create a ccdb and a user
+-- in the db
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 -- use the db
 USE hbtn_0d_usa;
