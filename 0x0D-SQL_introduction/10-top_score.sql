@@ -1,5 +1,4 @@
 -- List all by oreder
-SELECT score, name
-FROM second_table
-ORDERED BY score  Desc;
-
+SELECT `score`, `name`
+FROM `second_table`
+ORDER BY `score` DESC;
