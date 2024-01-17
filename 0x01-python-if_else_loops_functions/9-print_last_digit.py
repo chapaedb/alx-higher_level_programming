@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 def print_last_digit(number):
   my_list = str(num)
     length= len(my_list)
