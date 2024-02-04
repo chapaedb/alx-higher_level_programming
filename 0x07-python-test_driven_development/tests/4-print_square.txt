@@ -1,0 +1,51 @@
+from __main__ import print_square
+print_square(5)
+# Output:
+# #####
+# #####
+# #####
+# #####
+# #####
+
+try:
+    print_square("abc")
+except Exception as e:
+    print(e)
+# Output: TypeError: size must be an integer
+
+try:
+    print_square(-3)
+except Exception as e:
+    print(e)
+# Output: ValueError: size must be >= 0
+
+try:
+    print_square(3.5)
+except Exception as e:
+    print(e)
+# Output: TypeError: size must be an integer
+
+print_square(0)
+# Output: (no output)
+
+print_square(1)
+# Output:
+# #
+
+print_square(2)
+# Output:
+# ##
+# ##
+
+print_square(10)
+# Output:
+# ##########
+# ##########
+# ##########
+# ##########
+# ##########
+# ##########
+# ##########
+# ##########
+# ##########
+# ##########
