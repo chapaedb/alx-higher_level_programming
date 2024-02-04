@@ -1,0 +1,43 @@
+"""
+>>> text_indentation("Hello. How are you?")
+Hello.
+How are you?
+
+>>> text_indentation("This is a test. Did it work?")
+This is a test.
+Did it work?
+
+>>> text_indentation("No punctuation here")
+No punctuation here
+
+>>> text_indentation("Multiple: colons; and: semicolons; present.")
+Multiple:
+colons;
+and:
+semicolons;
+present.
+
+>>> text_indentation("Question without space before?")
+Question without space before?
+
+>>> text_indentation("Exclamation!")
+Exclamation!
+
+>>> text_indentation("Strange... spacing")
+Strange...
+spacing
+
+>>> text_indentation("")
+<BLANKLINE>
+<BLANKLINE>
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> text_indentation(["This is a list"])
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+"""
