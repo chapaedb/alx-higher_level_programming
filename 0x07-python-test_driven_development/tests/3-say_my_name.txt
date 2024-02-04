@@ -1,0 +1,9 @@
+>>> from __main__ import say_my_name
+>>> say_my_name("Chapa", "Denbel")
+My name is Chapa Denbel
+>>> say_my_name("Chapa", 12)
+TypeError: last_name must be a string
+>>> say_my_name(12, "Denbel")
+TypeError: first_name must be a strin
+>>> say_my_name("Chapa")
+My name is Chapa
