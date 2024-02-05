@@ -5,10 +5,10 @@ def fizzbuzz():
     buzz for 5 and fizzbuzz for multiple of both"""
     for i in range(1,101):
         if i % 3 == 0:
-            print("Fizz")
+            print("Fizz",end = " ")
         elif i % 5 == 0:
-            print("Buzz")
+            print("Buzz", end = " ")
         elif i % 3 == 0 and i % 5 == 0:
-            print("FizzBuzz")
+            print("FizzBuzz", end = " ")
         else:
-            print(i)
+            print(i, end  = " ")
