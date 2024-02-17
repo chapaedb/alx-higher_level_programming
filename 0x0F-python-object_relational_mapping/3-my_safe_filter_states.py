@@ -18,7 +18,7 @@ if __name__ == "__main__":
         db=database_name
     )
     cur = db.cursor()
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+    query = """SELECT * FROM states WHERE name = %s ORDER BY id ASC"""
     cur.execute(query, (state_name,))
     cur.fetchall()
     for row in rows:
