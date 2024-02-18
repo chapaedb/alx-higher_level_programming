@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" Add new"""
+""" Delete state"""
 
 import sys
 from sqlalchemy import create_engine
@@ -11,7 +11,7 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     database_name = sys.argv[3]
-    new_state_name = "Louisiana"
+    letter_to_delete = "a"
 
     db_url = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(username, password, database_name)
     engine = create_engine(db_url)
@@ -19,10 +19,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_state = State(name=new_state_name)
-    session.add(new_state)
+    states_to_delete = session.query(State).filter(State.name.like(f"%{letter_to_delete}%")).all()
+
+    for state in states_to_delete:
+        session.delete(state)
+
     session.commit()
-
-    print(new_state.id)
-
     session.close()
