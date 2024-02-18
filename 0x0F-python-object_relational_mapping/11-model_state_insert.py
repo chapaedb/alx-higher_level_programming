@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-""" Search ny specific name"""
+""" Add new state"""
+
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
