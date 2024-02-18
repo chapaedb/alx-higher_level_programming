@@ -14,5 +14,5 @@ if __name__ == "__main__":
     session = Session()
     states = session.query(State).order_by(State.id).all()
     for state in states:
-        print("{}: {}".format(state.id, state.name))
+        print(state.id, state.name, sep = ", ")
     session.close()
