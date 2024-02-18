@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-""" Add new state"""
-
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
