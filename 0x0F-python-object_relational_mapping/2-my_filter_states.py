@@ -1,14 +1,33 @@
 #!/usr/bin/python3
-"""Displayes states contents where satified"""
-import MySQLdb
+
+""" By name"""
+
 import sys
+import MySQLdb
 
 if __name__ == "__main__":
-    conn = MySQLdb.connect(host="localhost", user=sys.argv[1], passwd=sys.argv[2], conn=sys.argv[3], port=3306)
-    cur = conn.cursor()
-    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(sys.argv[4]))
-    rows = cur.fetchall()
-    for row in rows:
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database_name = sys.argv[3]
+    state_name = sys.argv[4]
+
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=username,
+        passwd=password,
+        db=database_name
+    )
+
+    cursor = db.cursor()
+
+    query = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(state_name)
+    cursor.execute(query)
+
+    results = cursor.fetchall()
+
+    for row in results:
         print(row)
-    cur.close()
-    conn.close()
+
+    cursor.close()
+    db.close()
